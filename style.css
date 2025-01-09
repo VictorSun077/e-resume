@@ -1,0 +1,388 @@
+/*--------------Colors
+#2B2D42 - dark blue
+#8099AE - lighr blue
+#EDF2F4 - blue to white
+#EF233C - red
+----------------------------*/
+
+/*--------------------Global Style---------------------*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: 'caveat', cursive;
+    font-weight: 400;
+}
+h1 {
+    font-size: 80px;
+}
+h2 {
+    font-size: 40px;
+    margin-top: 0;
+}
+h3{
+    margin: 0;
+    /* color: black; */
+}
+
+/*---------------------Navigator---------------*/
+/* nav {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top:0;
+} */
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    height: 44px; /* 固定高度 */
+    z-index: 10; /* 确保在页面最顶层 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加下方阴影 */
+}
+
+body {
+    margin: 0;
+    padding-top: 44px; /* 确保内容从导航栏下方开始 */
+}
+
+
+nav a {
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    color:#2B2D42;
+}
+
+
+@media (min-width: 440px){
+    nav a {
+        margin: 5px;
+        font-size: 16px;
+    }
+}
+
+/*----------------------Header only------------------------*/
+header {
+    position: relative; 
+    padding-top: 50px;
+    text-align: center;
+    background-color: #2B2D42;
+    color: #8099ae;
+}
+
+header h1, header h2 {
+    color: #EDF2F4;
+}
+
+h1 {
+   margin: 0; 
+}
+
+.content-wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 60px 50px;
+    max-width: 950px;
+    overflow: hidden;
+    /* position: relative; */
+}
+
+@media (min-width: 935px) {
+    .content-wrap{
+        flex-direction: row;
+    }
+}
+
+/*---------profile image-------------*/
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+@media (min-width: 440px) {
+    .profile-img{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 935px) {
+    .profile-img{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* -------------------download bottom------------------ */
+.btn {
+    text-decoration: none;
+    background-color: #EF233C;
+    color: white;
+    padding: 0 5px 0 5px;
+}
+
+@media (min-width: 440px) {
+    .btn{
+        padding: 10px;
+    }
+}
+
+/* .download {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+} */
+
+/*移动格式的btn*/
+.download {
+    position: fixed;  
+    right: 20px; 
+    bottom: 20px;
+    z-index: 10; 
+}
+
+/*----------------------Work------------------*/
+.work-experience {
+    padding-top: 40px;
+    background-color: #EDF2F4;
+    color:#2B2D42;
+}
+
+.work-wrapper {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 950px;
+}
+
+.job-wrapper {
+    display: block;
+    padding-bottom: 30px;
+}
+
+@media (min-width: 935px) {
+    .job-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        column-gap: 30px;
+    }
+}
+
+h3~p {
+    margin: 0;
+}
+
+@media (min-width: 935px) {
+    .job-description p:first-of-type {
+        margin-top: 0;
+    }
+}
+
+ol li {
+    margin: 8px 0;
+    padding-left: 15px;
+}
+
+ol li a {
+    color: blue;
+}
+
+/*-------------------------Education------------------------*/
+.education {
+    padding: 40px 0;
+    background: linear-gradient(rgba(141,153,174,0.9), rgba(141,153,174,0.7)),
+            url('./assets/GiannisTeamChina.JPG') no-repeat fixed;
+    background-size: cover !important;
+}
+
+.education-wrapper {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 950px;
+}
+
+ul {
+    margin-top: 0;
+}
+
+/*-------------------------vvvvvvvvvvvVideo------------------------*/
+
+/* Video Portfolio Section */
+.video-portfolio {
+    padding: 40px 20px;
+    background-color: #EDF2F4;
+    color: #2B2D42;
+    text-align: center;
+}
+
+.video-wrapper {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 950px;
+}
+
+/* .video-portfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+} */
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px;
+    justify-items: center;
+    align-items: start;
+}
+
+/* Ensure uniform size for all video items */
+.video-item {
+    width: 100%; /* Full width within grid cell */
+    max-width: 250px; /* Maximum width for each item */
+    height: 400px; /* Fixed height to ensure uniformity */
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Thumbnail Container with 3:4 ratio */
+.thumbnail-container {
+    width: 100%; /* Fill width of container */
+    padding-top: 133.33%; /* 3:4 ratio (height = width * 3/4) */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* Round corners */
+}
+
+.thumbnail-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image */
+    width: 100%; /* Stretch to fill the width */
+    height: 100%; /* Stretch to fill the height */
+    object-fit: cover; /* Ensure the image covers the entire area, cropping as needed */
+}
+
+.video-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+
+.video-stats {
+    font-size: 0.9rem;
+    color: #8099AE;
+}
+
+@media (max-width: 935px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr); /* 小屏幕每行 2 个单元 */
+    }
+}
+
+@media (max-width: 440px) {
+    .video-grid {
+        grid-template-columns: 1fr; /* 超小屏幕每行 1 个单元 */
+    }
+}
+
+/*-------------------------Footer------------------------*/
+/* footer {
+    text-align: center;
+    background-color: #2B2D42;
+    color: #8099ae;
+}
+
+.contact-wrapper {
+    margin: 0 auto;
+    padding: 50px 0;
+    max-width: 900px;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.media-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: #8099ae solid 2px;
+}
+
+.media-pic:hover {
+    transform: scale(1,1);
+}
+
+p+h3 {
+    margin-top: 30px;
+}
+
+footer p {
+    margin-top: 50px;
+} */
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    background-color: #2B2D42;
+    color: #8099ae;
+    padding: 30px 0;
+}
+
+.contact-wrapper {
+    margin: 0 auto;
+    padding: 50px 20px;
+    max-width: 900px;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px; /* 间距 */
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.media-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #8099ae; /* 圆形边框 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-pic:hover {
+    transform: scale(1.1); /* 悬停放大 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+}
+
+.contact-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #EDF2F4; /* 描述文字颜色 */
+}
